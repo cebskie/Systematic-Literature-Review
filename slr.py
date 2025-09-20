@@ -58,7 +58,7 @@ CONFIG = {
         "survey",
         "duplicate",
         "single domain",
-        "no quantitative results",
+        "no quantitative results","LSTM", "CNN", "ANN", "BERT", "RoBERT", "Word2Vec", "Transformer", "Reinforcement", "reinforced", "galaxy", 'galaxies'
     ],
 
     "download_pdfs": True,
@@ -359,7 +359,7 @@ def main():
             # Try to find 'method' keywords in text_extracted
             method_snippet = ""
             lower = text_extracted.lower()
-            for kw in ["chunk", "chunking", "semantic", "sliding", "fixed-size", "hierarch"]:
+            for kw in ["sentiment", "classification", "multi domain", "cross domain", "domain adaptation", "out-of-fomain", "domain invariant", "machine learning", "logistic regression", "linear", "naive bayes", "SVM", "random forest", "nearest neigbor", "KNN", "support vector machine"]:
                 if kw in lower:
                     i = lower.find(kw)
                     method_snippet = text_extracted[max(0, i-200):i+200].replace("\n"," ")[:800]
